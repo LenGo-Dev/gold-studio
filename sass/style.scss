@@ -1,0 +1,276 @@
+/* Variables */
+$color-primary: #FED238;
+$color-white: #ffffff;
+//$color-text-light: #ffffff;
+$color-text: #242226;
+
+$font-logo: "Gwendolyn", cursive;
+$font-text: "Lato", sans-serif;
+
+/* Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: $font-text;
+  color: $color-text;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+section {
+  padding: 96px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.subsection-title {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background: $color-primary;
+  color: $color-white;
+  border-width: 2px;
+  border-style: solid;
+
+    &:hover {
+      background: $color-white;
+      color: $color-primary;
+    }
+}
+
+/* Navigation */
+
+.navigation {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px 120px;
+  z-index: 1;
+}
+.logo {
+  color: $color-primary;
+  font-family: $font-logo;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 32px;
+}
+.navigation .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+ul li {
+  display: inline-block;
+  margin-right: 36px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: $color-white;
+  &:hover {
+    color: $color-primary;
+    cursor: pointer;
+  }
+}
+
+.burger-nav {
+  display: none;
+}
+
+.burger-nav ul {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 12px;
+
+  a {
+    color: $color-white;
+    padding: 0 24px;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+ @media (max-width: 768px)  {
+   .navigation {
+     padding: 12px 20px;
+   }
+   .nav-menu {
+     display: none;
+   }
+   .burger-nav {
+     display: block;
+   }
+
+   .burger-nav i {
+     font-size: 20px;
+   }
+
+   .burger-nav  ul li {
+     display: block;
+   }
+}
+
+/* Splash */
+.splash {
+  position: relative;
+  margin-top: 0;
+  background-image: url("https://i.postimg.cc/BvqZkLYb/pexels-knownasovan-57690.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $color-white;
+  min-height: 100vh;
+}
+
+.splash-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 20%;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(60, 52, 49, 0.6);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  word-spacing: 12px;
+  text-shadow: 2px 2px 5px #8d7c72;
+}
+
+.page-subtitle {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 24px 0;
+}
+
+/*Services*/
+
+.service i {
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: $color-primary;
+  border-radius: 50%;
+  border: 3px solid $color-primary;
+}
+
+.service p:first-of-type {
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+/*Portfolio*/
+.portfolio {
+  background: #F7F7F7;
+}
+
+.project, .card {
+  border: none;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.project p:first-of-type {
+  margin: 0;
+  font-weight: bold;
+}
+.project p:last-of-type {
+  font-style: italic;
+}
+
+/*Footer*/
+
+footer {
+  margin: 48px auto;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 0;
+}
+
+footer i {
+  font-size: 16px;
+  background: $color-text;
+  width: 32px;
+  height: 32px;
+  color: $color-white;
+  border-radius: 50%;
+}
+.fa-brands {
+  line-height: 2;
+}
+
+footer .container {
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  top: 20%;
+  left: 20px;
+}
+
