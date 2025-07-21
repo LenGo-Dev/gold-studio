@@ -123,6 +123,7 @@ ul li {
   left: 50%;
   transform: translateX(-50%);
   padding-top: 12px;
+  background-color: rgb(78 63 57 / 83%);
 
   a {
     color: $color-white;
@@ -146,6 +147,12 @@ ul li {
 
    .burger-nav i {
      font-size: 20px;
+     cursor: pointer;
+   }
+
+   .burger-nav:focus ul {
+     display: block;
+     cursor: pointer;
    }
 
    .burger-nav  ul li {
@@ -274,3 +281,17 @@ footer p {
   left: 20px;
 }
 
+@media (max-width: 768px) {
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer p {
+    position: inherit;
+    order: 2;
+    top: 0;
+    left: 0;
+    margin-top: 24px;
+  }
+}
